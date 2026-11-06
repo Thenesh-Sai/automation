@@ -1,0 +1,28 @@
+## Build
+bin/
+obj/
+out/
+TestResults/
+*.user
+*.suo
+.vs/
+*.DotSettings.user
+
+## Secrets
+**/appsettings.*.local.json
+**/secrets.json
+.env
+.env.*
+
+## Playwright
+.playwright/
+**/playwright-report/
+**/test-results/
+**/artifacts/
+**/traces/
+**/screenshots/
+
+## OS / IDE
+.DS_Store
+Thumbs.db
+*.swp

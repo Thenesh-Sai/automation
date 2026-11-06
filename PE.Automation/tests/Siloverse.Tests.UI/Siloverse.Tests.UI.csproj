@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="NUnit" />
+    <PackageReference Include="NUnit3TestAdapter" />
+    <PackageReference Include="NUnit.Analyzers">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Microsoft.Extensions.Logging" />
+    <PackageReference Include="Microsoft.Playwright" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Siloverse.UI\Siloverse.UI.csproj" />
+    <ProjectReference Include="..\..\src\Siloverse.Api\Siloverse.Api.csproj" />
+    <ProjectReference Include="..\..\src\Siloverse.Infrastructure\Siloverse.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Siloverse.Configuration\Siloverse.Configuration.csproj" />
+    <ProjectReference Include="..\..\src\Siloverse.Models\Siloverse.Models.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\config\appsettings.json" Link="appsettings.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\..\config\appsettings.Development.json" Link="appsettings.Development.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\..\config\appsettings.Test.json" Link="appsettings.Test.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
